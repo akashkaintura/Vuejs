@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="vue-app">
+       <h1>Loops lists </h1>
+
+       <!-- using listings -->
+
+      <!-- <ul>
+          <li v-for="character in characters">{{ character }}</li>
+      </ul>
+      <ul>
+          <li v-for="(Actor,index) in Actors">{{ index }}.{{ Actor.name }} - {{ Actor.age }}</li>
+      </ul> -->
+
+      <!-- using div so we dont need to show the values in lists -->
+      <!-- <div v-for="character in characters">
+          <h3>{{ character }}</h3>
+      </div> -->
+
+      <!-- template view which will not occupy spaces like div. -->
+      <template v-for="(Actor,index) in Actors">
+       <h3>{{ index }}.{{ Actor.name }} </h3> 
+       <p>{{ Actor.age }}</p>
+      </template>
+
+     <template v-for="Actor in Actors">
+        <div v-for="(val, key) in Actor">
+            <p>{{ key }} - {{ val }}</p>
+        </div>
+     </template>
+
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
