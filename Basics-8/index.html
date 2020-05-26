@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="vue-app">
+        
+        <h1>Dynamic CSS</h1>
+
+        <!-- <h2>Ex. 1</h2>
+        <button>Toggle available</button>
+        <div v-on:click="available = !available" v-bind:class="{available: available}">
+            <span>CHECK</span>
+        </div> -->
+        
+        <h2>Ex. 2</h2>
+        <button v-on:click="nearby= !nearby">Toggle Nearby</button> 
+        <button v-on:click="available= !available">Toggle available</button> 
+        <div v-bind:class = "compClasses">
+            <span>CHECK</span>
+        </div>
+
+        
+       
+
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
