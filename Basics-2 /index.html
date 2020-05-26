@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="vue-app">
+        <h1>Data Binding</h1>
+
+        <!--- v:bind binds the data without using the curly braces  or we can use a:href as well-->
+
+        <a v-bind:href="website">Vuejs with regular bind</a> 
+                    or <br>
+        <a :href="website">Vuejs with using shorthand bind </a> 
+        <br>
+        <input type="text" v-bind:value="name">
+
+        <!-- Biding the html-->
+        
+        <p v-html="websiteTag"></p>
+
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
