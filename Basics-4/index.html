@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="vue-app">
+
+       <h1>Events Modifiers</h1>
+
+                <button @click.once = "add(1)">Add a year</button> 
+                <button @click="subtract(1)">subtract a year</button>
+
+                <button v-on:dblclick="add(5)">Add 5 year</button>               
+                <button v-on:dblclick="subtract(10)">subtract 10 year</button>
+                <p>My age is  {{ age }}</p>
+
+                
+                <a @click.prevent ="click" href="https://www.vuejs.org">Vuejs</a>
+
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>

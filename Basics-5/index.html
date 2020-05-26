@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="vue-app">
+        <h1>keyBoard Events</h1>
+
+        <!-- DOM keyboard key events listeners -->
+
+        <label>Name: </label>
+        <input type="text" v-on:keyup.enter="logName">
+
+        <label>Age:</label>
+        <input type="text " v-on:keyup.ctrl.enter="logAge">
+        
+       
+
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
