@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="vue-app">
+
+       <h1>Events</h1>
+
+       <!-- vuejs events using the DOM events(1) -->
+
+        <!-- <button v-on:click="age++">Add </button>
+       <p>My age is  {{ age }}</p>
+       <button v-on:click="age--">subtract</button>
+            <br><br> -->
+
+                <!-- or  using the methods with  1 as a parameter-->
+
+                <!-- <button v-on:click="add(1)">Add a year</button>  -->
+
+                 <!--we can use @ instead of v-on as well  -->
+                 <button @click="add(1)">Add a year</button> 
+                <button v-on:click="subtract(1)">subtract a year</button>
+
+                <!-- double click events with parameters -->
+
+                <button v-on:dblclick="add(5)">Add 5 year</button>               
+                <button v-on:dblclick="subtract(10)">subtract 10 year</button>
+                <p>My age is  {{ age }}</p>
+
+                <!-- Track mouse-movement  -->
+
+                <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+
+    </div>
+</body>
+
+<script src="app.js"></script>
+
+</html>
