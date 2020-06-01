@@ -1,11 +1,13 @@
 <template>
 <div id ='persons'>
+
   <ul>
      <li v-for="person in persons" v-on:click="person.show = !person.show">
                 <h2>{{ person.name }}</h2>
                 <h3 v-show="person.show">{{ person.speciality }}</h3>
             </li>
   </ul>
+  <button v-on:click="deletePerson">Delete persons</button>
 </div>
 
 </template>
@@ -14,20 +16,21 @@
 
 
 export default {
-
+props:{
+  persons:{
+    type:Array,
+    required:true
+  }
+},
     data () {
         return {
-          persons:[
-            { name:'Akash' ,speciality:'Vue Component', show:false},
-            { name:'Bennet' ,speciality:'HTML', show:false},
-            { name:'Charley' ,speciality:'Webpack', show:false},
-            { name:'Dickens' ,speciality:'Data Binding', show:false},
-            { name:'Elfanso' ,speciality:'React', show:false},
-            { name:'Frank' ,speciality:'Angular', show:false},
-            { name:'Giorgio' ,speciality:'Laravel', show:false},
-            { name:'Hermans' ,speciality:'SFDC', show:false},
-          ]
+
         }
+    },
+    methods:{
+      deletePerson:function(){
+        this.persons.pop();
+      }
     }
 }
 </script>

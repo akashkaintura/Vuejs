@@ -1,6 +1,6 @@
 <template>
 <header>
-<h1>{{ title}}</h1>
+<h1 v-on:click="changeTitle">{{ title}}</h1>
 </header>
 
 </template>
@@ -9,11 +9,20 @@
 
 
 export default {
-
+  props:{
+    title:{
+      type:String
+    }
+  },
     data () {
         return {
-          title: 'App'
+          title: 'Speciality'
         }
+    },
+    methods:{
+      changeTitle:function(){
+        this.$emit('changeTitle', 'Skills of Persons');
+      }
     }
 }
 </script>
