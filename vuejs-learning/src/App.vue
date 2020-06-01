@@ -8,7 +8,7 @@
 
         <app-footer v-bind:title="title" ></app-footer> -->
 
-        <form-helper>
+        <!-- <form-helper>
           <div slot="form-header">
             <h3>This is title of form</h3>
             <p>Info on Form</p>
@@ -23,7 +23,14 @@
             <button v-on:click="handleSubmit">Submit</button>
           </div>
 
-        </form-helper>
+        </form-helper> -->
+
+      <!-- swithcing the forms retains the data -->
+        <keep-alive>
+            <component v-bind:is="component"></component>
+        </keep-alive>
+        <button v-on:click="component = 'form-one'">Show form one</button>
+        <button v-on:click="component = 'form-two'">Show form two</button>
 
     </div>
 </template>
@@ -34,7 +41,10 @@
 // import Front from './components/Front.vue'
 // import Footer from './components/Footer.vue';
 
-import formHelper from './components/formHelper.vue';
+//  import formHelper from './components/formHelper.vue';
+
+import formOne from './components/formOne.vue';
+import formTwo from './components/formTwo.vue';
 
 export default {
     components: {
@@ -42,12 +52,17 @@ export default {
         // 'app-front':Front,
         // 'app-footer':Footer
 
-        'form-helper': formHelper
+        //  'form-helper': formHelper
+
+        'form-one':formOne,
+        'form-two':formTwo
     },
 
     data () {
         return {
-           title: 'Dynamic slot title'
+
+          component:'form-one'
+          //  title: 'Dynamic slot title'
 
           // props
           //  persons:[
@@ -67,6 +82,10 @@ export default {
       // updateTitle: function(updatedTitle){
       //   this.title = updatedTitle;
       // }
+
+      handleSubmit: function(){
+            alert('thanks for submitting');
+        }
     }
 }
 </script>
