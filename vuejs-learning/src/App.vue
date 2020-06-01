@@ -1,8 +1,9 @@
 <template>
     <div>
 
-      <add-blog></add-blog>
-       <show-blogs></show-blogs>
+        <add-blog></add-blog>
+        <show-blogs></show-blogs>
+        <list-blogs></list-blogs>
 
       <!-- binding using the primitive type -->
        <!-- <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header> -->
@@ -52,8 +53,8 @@
 // import formOne from './components/formOne.vue';
 // import formTwo from './components/formTwo.vue';
 
- import addBlog from './components/addBlog.vue';
-
+import addBlog from './components/addBlog.vue';
+import listBlogs from './components/listBlogs.vue';
 import showBlogs from './components/showBlogs.vue';
 
 
@@ -70,7 +71,8 @@ export default {
 
          'add-blog': addBlog,
 
-        'show-blogs': showBlogs
+        'show-blogs': showBlogs,
+        'list-blogs': listBlogs
   },
 
     data () {
