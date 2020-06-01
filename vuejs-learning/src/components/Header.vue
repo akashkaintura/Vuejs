@@ -7,6 +7,7 @@
 
 <script>
 
+import {bus} from '../main';
 
 export default {
   props:{
@@ -16,12 +17,15 @@ export default {
   },
     data () {
         return {
-          title: 'Speciality'
+          // title: 'Speciality'
         }
     },
     methods:{
       changeTitle:function(){
-        this.$emit('changeTitle', 'Skills of Persons');
+        // this.$emit('changeTitle', 'Skills of Persons');
+
+        this.title = 'Skills of Persons';
+        bus.$emit('titleChnaged', 'Skills of Persons');
       }
     }
 }

@@ -12,6 +12,7 @@
 </template>
 
 <script>
+//local directory import
 import Header from './components/Header.vue';
 import Front from './components/Front.vue'
 import Footer from './components/Footer.vue';
@@ -38,9 +39,9 @@ export default {
           title: "Speciality"
         }
     },
-    methods:{
+   methods: {
       updateTitle: function(updatedTitle){
-        this.title = updatedTitle
+        this.title = updatedTitle;
       }
     }
 }
