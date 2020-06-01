@@ -1,22 +1,25 @@
 <template>
-  <div>
-<ul>
-  <li v-bind:key="ninja in ninjas">{{ ninja }}</li>
-</ul>
+<div>
+  <h1>Lists</h1>
+ <ul>
+        <li v-for="ninja in ninjas">{{ ninja }}</li>
+    </ul>
+</div>
 
-  </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      heads:[
-        'Name1',
-        'Name2',
-        'Name3'
-      ]
+    data () {
+        return {
+          // ninjas: ['Yoshi', 'Mario', 'Ryu']
+        }
     }
-  }
 }
 </script>
+
+<style scoped>
+h1{
+  color: aqua;
+}
+</style>
