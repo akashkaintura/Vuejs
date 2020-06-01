@@ -1,5 +1,6 @@
 <template>
     <div>
+      <add-blog></add-blog>
       <!-- binding using the primitive type -->
        <!-- <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header> -->
 
@@ -26,16 +27,18 @@
         </form-helper> -->
 
       <!-- swithcing the forms retains the data -->
-        <keep-alive>
+        <!-- <keep-alive>
             <component v-bind:is="component"></component>
         </keep-alive>
         <button v-on:click="component = 'form-one'">Show form one</button>
-        <button v-on:click="component = 'form-two'">Show form two</button>
+        <button v-on:click="component = 'form-two'">Show form two</button> -->
+
 
     </div>
 </template>
 
 <script>
+
 //local directory import
 // import Header from './components/Header.vue';
 // import Front from './components/Front.vue'
@@ -43,8 +46,10 @@
 
 //  import formHelper from './components/formHelper.vue';
 
-import formOne from './components/formOne.vue';
-import formTwo from './components/formTwo.vue';
+// import formOne from './components/formOne.vue';
+// import formTwo from './components/formTwo.vue';
+
+import addBlog from './components/addBlog.vue';
 
 export default {
     components: {
@@ -54,14 +59,16 @@ export default {
 
         //  'form-helper': formHelper
 
-        'form-one':formOne,
-        'form-two':formTwo
-    },
+        // 'form-one':formOne,
+        // 'form-two':formTwo
+
+        'add-blog': addBlog
+  },
 
     data () {
         return {
 
-          component:'form-one'
+          // component:'form-one'
           //  title: 'Dynamic slot title'
 
           // props
@@ -83,9 +90,9 @@ export default {
       //   this.title = updatedTitle;
       // }
 
-      handleSubmit: function(){
-            alert('thanks for submitting');
-        }
+      // handleSubmit: function(){
+      //       alert('thanks for submitting');
+      //   }
     }
 }
 </script>
