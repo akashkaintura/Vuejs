@@ -19,21 +19,25 @@
  ```
 <h5>you can install dependencies and run using the vue-cli</h5>
 
-
  ```bash
  npm install && npm run dev
  ```
 
- <p> I have used vue resource, router and mixins </p>
+ <h4> I have used vue resource, router and mixins </h4>
 ```bash
 npm install vue-resource --save
+```
+
+```bash
 npm install vue-router --save
 ```
- <p> vue-cli global installation </p>
+
+ <h5> vue-cli global installation </h5>
 ```bash
 npm install -g vue-cli
 ```
 <h5>vue init webpack-simple</h5>
+
 ```bash
 vue init webpack-simple --projectname
 ```
