@@ -1,7 +1,7 @@
 <template>
     <div id="show-blogs">
         <h1>All Blog Articles</h1>
-        <input type="text" v-model="search" placeholder="search blogs" />
+        <input type="text" v-model="search" placeholder="search blogs" >
         <div v-for="blog in filteredBlogs" class="single-blog">
             <router-link v-bind:to="'/blog/' + blog.id"><h2>{{ blog.title | to-Uppercase }}</h2></router-link>
             <article>{{ blog.content | snippet }}</article>
@@ -61,6 +61,9 @@ export default {
 </script>
 
 <style>
+h1{
+  color: #e76a17;
+}
 #show-blogs{
     max-width: 800px;
     margin: 0px auto;
@@ -69,7 +72,7 @@ export default {
     padding: 20px;
     margin: 20px 0;
     box-sizing: border-box;
-    background: #eee;
+    background: rgb(255, 184, 151);
 }
 #show-blogs a{
     color: #444;

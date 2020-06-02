@@ -92,6 +92,10 @@ export default {
     margin: 20px auto;
     max-width: 500px;
 }
+h2{
+  color: #e76a17;
+}
+
 label{
     display: block;
     margin: 20px 0 10px;
@@ -116,5 +120,15 @@ h3{
 #checkboxes label{
     display: inline-block;
     margin-top: 0;
+}
+
+button {
+  transition-duration: 0.2s;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px rgb(48, 179, 168) , rgb(2, 173, 159);
+  /* background-color: rgb(49, 202, 189); */
+  color: rgb(17, 190, 233);
 }
 </style>
