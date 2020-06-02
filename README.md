@@ -35,6 +35,7 @@ npm install vue-router --save
 ```
 
  <h5> vue-cli global installation </h5>
+
 ```bash
 npm install -g vue-cli
 ```
