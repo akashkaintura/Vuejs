@@ -8,20 +8,32 @@
             <textarea v-model.lazy.trim="blog.content"></textarea>
             <div id="checkboxes">
                 <p>Blog Categories:</p>
-                <label>Ninjas</label>
-                <input type="checkbox" value="ninjas" v-model="blog.categories" />
-                <label>Wizards</label>
-                <input type="checkbox" value="wizards" v-model="blog.categories" />
-                <label>Mario</label>
-                <input type="checkbox" value="mario" v-model="blog.categories" />
-                <label>Cheese</label>
-                <input type="checkbox" value="cheese" v-model="blog.categories" />
+
+                <input type="checkbox" value="PHP" v-model="blog.categories">
+                <label>PHP</label>
+
+                <input type="checkbox" value="Laravel" v-model="blog.categories" >
+                <label>Larvel</label>
+
+                <input type="checkbox" value="Vue" v-model="blog.categories" >
+                <label>Vue</label>
+
+                <input type="checkbox" value="Angular" v-model="blog.categories" >
+                 <label>Angular</label>
+
+                  <input type="checkbox" value="webpack" v-model="blog.categories" >
+                 <label>webpack</label>
+
+                  <input type="checkbox" value="wordpress" v-model="blog.categories" >
+                 <label>wordpress</label>
+
+
             </div>
             <label>Author:</label>
-            <select v-model="blog.author">
+            <input v-model="blog.author" type="smalltext" name="author" >
+            <!-- <select v-model="blog.author">
                 <option v-for="author in authors">{{ author }}</option>
-            </select>
-            <hr />
+            </select> -->
             <button v-on:click.prevent="post">Add Blog</button>
         </form>
         <div v-if="submitted">
@@ -52,17 +64,13 @@ export default {
                 categories: [],
                 author: ''
             },
-            authors: ['The Net Ninja', 'The Angular Avenger', 'The Vue Vindicator'],
+            authors: [],
             submitted: false
         }
     },
     methods: {
         post: function(){
-            this.$http.post('http://jsonplaceholder.typicode.com/posts', {
-                title: this.blog.title,
-                body: this.blog.content,
-                userId: 1
-            }).then(function(data){
+            this.$http.post('https://blog-by-akash.firebaseio.com/posts.json', this.blog).then(function(data){
                 console.log(data);
                 this.submitted = true;
             });
