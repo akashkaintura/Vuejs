@@ -24,9 +24,11 @@
  ```
 
  <h4> I have used vue resource, router and mixins </h4>
+
 ```bash
 npm install vue-resource --save
 ```
+<h5>router</h5>
 
 ```bash
 npm install vue-router --save
