@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav >
         <ul>
             <li><router-link to="/" exact>Blog</router-link></li>
             <li><router-link to="/add" exact>Add a new blog</router-link></li>
@@ -28,12 +28,12 @@ a{
     border-radius: 10px;
 }
 nav{
-    background: #444;
+    background: #ce6e6e;
     padding: 14px 0;
     margin-bottom: 40px;
 }
 .router-link-active{
     background: rgb(252, 248, 248);
-    color: #444;
+    color: #ce6e6e;
 }
 </style>

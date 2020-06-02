@@ -1,4 +1,4 @@
-<template>
+<template id="container">
     <div id="add-blog">
         <h2>Add a New Blog Post</h2>
         <form v-if="!submitted">
@@ -80,7 +80,12 @@ export default {
 </script>
 
 <style scoped>
+/* #container{
+  background-color: coral;
+} */
+
 #add-blog *{
+
     box-sizing: border-box;
 }
 #add-blog{
